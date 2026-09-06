@@ -850,9 +850,8 @@ do
       -- You can use 'stop_after_first' to run the first available formatter from the list
       -- javascript = { "prettierd", "prettier", stop_after_first = true },
       xml = { 'xmllint' },
-      bash = { 'beautysh' },
-      sh = { 'beautysh' },
-      java = { 'astyle' },
+      bash = { 'shfmt' },
+      sh = { 'shfmt' },
       json = { 'jq' },
     },
   }
@@ -860,6 +859,9 @@ do
   vim.keymap.set({ 'n', 'v' }, '<leader>f', function() require('conform').format { async = true } end, { desc = '[F]ormat buffer' })
 end
 
+require("conform").formatters.shfmt = {
+  append_args = { "--indent", "4" },
+}
 -- ============================================================
 -- SECTION 8: AUTOCOMPLETE & SNIPPETS
 -- blink.cmp and luasnip setup
