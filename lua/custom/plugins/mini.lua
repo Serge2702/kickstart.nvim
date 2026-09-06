@@ -1,0 +1,5 @@
+require('mini.cursorword').setup()
+require('mini.jump').setup()
+require('mini.icons').setup()
+require('mini.tabline').setup()
+require('mini.pairs').setup()
