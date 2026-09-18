@@ -12,12 +12,13 @@ config = function()
     'RainbowDelimiterCyan',
   }
 
-  local hooks = require 'ibl.hooks'
-
   vim.g.rainbow_delimiters = {
     blacklist = { 'xml' },
     highlight = highlight,
   }
+
+  local hooks = require 'ibl.hooks'
+
   require('ibl').setup { scope = { highlight = highlight } }
 
   hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
