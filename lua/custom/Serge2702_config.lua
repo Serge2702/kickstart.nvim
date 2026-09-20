@@ -1,6 +1,6 @@
   -- My own variables
   vim.o.fileformats = 'unix,dos'
-  vim.o.background = 'light'
+  vim.o.background = 'dark'
   vim.o.diffopt = 'internal,filler,closeoff,vertical,iwhite,algorithm:histogram,inline:word,linematch:60,anchor'
   vim.o.history = 1024
   vim.o.tabstop = 8
