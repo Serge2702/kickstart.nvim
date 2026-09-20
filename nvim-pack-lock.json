@@ -50,9 +50,17 @@
       "rev": "a68e38b8e55d69a215d0f02598900a79c356da9d",
       "src": "https://github.com/loctvl842/monokai-pro.nvim"
     },
+    "neo-tree.nvim": {
+      "rev": "f3f3bf73414e400cf9fc13fda50f00404a8f8ab1",
+      "src": "https://github.com/nvim-neo-tree/neo-tree.nvim"
+    },
     "neovim-gui-shim": {
       "rev": "56f283514591a4b8f5ff4503aa61368cab9df715",
       "src": "https://github.com/equalsraf/neovim-gui-shim"
+    },
+    "nui.nvim": {
+      "rev": "10fc361835c856ba4233ef5ea135b919bf3dce97",
+      "src": "https://github.com/MunifTanjim/nui.nvim"
     },
     "nvim-lspconfig": {
       "rev": "84252f9832fb5b9024fe9f7258e7c2aff915e6fb",
