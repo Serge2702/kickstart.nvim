@@ -256,6 +256,11 @@ end
 -- NOTE: Load my own variables
 require('custom.Serge2702_config')
 
+-- NOTE: If running in Neovide, load configuration.
+if vim.g.neovide then
+  require('custom.Neovide')
+end
+
 -- ============================================================
 -- SECTION 3: PLUGIN MANAGER INTRO
 -- vim.pack intro, build hooks
