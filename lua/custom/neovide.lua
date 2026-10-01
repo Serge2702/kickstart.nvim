@@ -25,6 +25,9 @@ vim.g.neovide_position_animation_length = 0.15
 -- Scroll Animation Length
 vim.g.neovide_scroll_animation_length = 0.2
 
+-- Far scroll lines
+vim.g.neovide_scroll_animation_far_lines = 0
+
 -- Progress Bar
 vim.g.neovide_progress_bar_enabled = true
 vim.g.neovide_progress_bar_height = 5.0
