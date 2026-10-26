@@ -13,7 +13,7 @@ require('neo-tree').setup {
   filesystem = {
     window = {
       mappings = {
-        ['<leader>nc'] = 'close_window',
+        ['<leader>N'] = 'close_window',
       },
     },
   },
