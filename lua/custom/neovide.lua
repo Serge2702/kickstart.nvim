@@ -3,8 +3,8 @@ vim.o.inccommand = 'nosplit'
 vim.o.guifont = "JetBrains Mono,Maple Mono NF:h12"
 
 -- Title Bar Color (Currently Windows only)
-vim.g.neovide_title_background_color = "#232136"
-vim.g.neovide_title_text_color = "#e0def4"
+-- vim.g.neovide_title_background_color = "#232136"
+-- vim.g.neovide_title_text_color = "#e0def4"
 
 -- Floating Blur Amount
 vim.g.neovide_floating_blur_amount_x = 2.0
