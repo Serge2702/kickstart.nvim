@@ -38,6 +38,7 @@ vim.g.rainbow_delimiters = {
     'RainbowDelimiterRed',
     'RainbowDelimiterCyan',
   },
+  blacklist = { 'xml' },
 }
 
 local hooks = require 'ibl.hooks'
