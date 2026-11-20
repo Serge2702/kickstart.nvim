@@ -9,15 +9,7 @@ vim.pack.add { 'https://github.com/HiPhish/rainbow-delimiters.nvim' }
 -- vim.api.nvim_set_hl(0, 'RainbowDelimiterGreen', { fg = '#98C379' })
 -- vim.api.nvim_set_hl(0, 'RainbowDelimiterViolet', { fg = '#C678DD' })
 -- vim.api.nvim_set_hl(0, 'RainbowDelimiterCyan', { fg = '#56B6C2' })
-
-vim.api.nvim_set_hl(0, 'RainbowDelimiterRed', { fg = '#E46876' })
-vim.api.nvim_set_hl(0, 'RainbowDelimiterYellow', { fg = '#E6C384' })
-vim.api.nvim_set_hl(0, 'RainbowDelimiterBlue', { fg = '#9CABCA' })
-vim.api.nvim_set_hl(0, 'RainbowDelimiterOrange', { fg = '#FFA066' })
-vim.api.nvim_set_hl(0, 'RainbowDelimiterGreen', { fg = '#98BB6C' })
-vim.api.nvim_set_hl(0, 'RainbowDelimiterViolet', { fg = '#D27E99' })
-vim.api.nvim_set_hl(0, 'RainbowDelimiterCyan', { fg = '#A3D4D5' })
-
+--
 ---@type rainbow_delimiters.config
 vim.g.rainbow_delimiters = {
   strategy = {
@@ -41,8 +33,30 @@ vim.g.rainbow_delimiters = {
   blacklist = { 'xml' },
 }
 
+local highlight = {
+  'RainbowBlue',
+  'RainbowOrange',
+  'RainbowGreen',
+  'RainbowYellow',
+  'RainbowViolet',
+  'RainbowRed',
+  'RainbowCyan',
+}
+
 local hooks = require 'ibl.hooks'
 
-require('ibl').setup { scope = { highlight = vim.g.rainbow_delimiters.highlight } }
+-- create the highlight groups in the highlight setup hook, so they are reset
+-- every time the colorscheme changes
+hooks.register(hooks.type.HIGHLIGHT_SETUP, function()
+  vim.api.nvim_set_hl(0, 'RainbowRed', { link = 'RainbowDelimiterRed' })
+  vim.api.nvim_set_hl(0, 'RainbowYellow', { link = 'RainbowDelimiterYellow' })
+  vim.api.nvim_set_hl(0, 'RainbowBlue', { link = 'RainbowDelimiterBlue' })
+  vim.api.nvim_set_hl(0, 'RainbowOrange', { link = 'RainbowDelimiterOrange' })
+  vim.api.nvim_set_hl(0, 'RainbowGreen', { link = 'RainbowDelimiterGreen' })
+  vim.api.nvim_set_hl(0, 'RainbowViolet', { link = 'RainbowDelimiterViolet' })
+  vim.api.nvim_set_hl(0, 'RainbowCyan', { link = 'RainbowDelimiterCyan' })
+end)
+
+require('ibl').setup { scope = { highlight = highlight } }
 hooks.register(hooks.type.SCOPE_HIGHLIGHT, hooks.builtin.scope_highlight_from_extmark)
 require('ibl').update { indent = { char = '▏' } }
