@@ -14,6 +14,13 @@ require('kanagawa').setup {
   overrides = function(colors) -- add/modify highlights
     return {
       ErrorMsg = { fg = colors.palette.autumnRed },
+      RainbowDelimiterRed = { fg = colors.theme.term[2] },
+      RainbowDelimiterYellow = { fg = colors.theme.term[12] },
+      RainbowDelimiterBlue = { fg = colors.theme.term[13] },
+      RainbowDelimiterOrange = { fg = colors.theme.term[17] },
+      RainbowDelimiterGreen = { fg = colors.theme.term[11] },
+      RainbowDelimiterViolet = { fg = colors.theme.term[14] },
+      RainbowDelimiterCyan = { fg = colors.theme.term[15] },
     }
   end,
   theme = 'wave', -- Load "wave" theme
