@@ -1,6 +1,6 @@
 -- Disable live preview substitutions.
 vim.o.inccommand = 'nosplit'
-vim.o.guifont = "JetBrains Mono,Symbols Nerd Font:h13"
+vim.o.guifont = "Iosevka,Symbols Nerd Font:h14"
 
 -- Title Bar Color (Currently Windows only)
 -- vim.g.neovide_title_background_color = "#232136"
